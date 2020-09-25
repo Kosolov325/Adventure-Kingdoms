@@ -45,7 +45,7 @@ server_event_bank_management                    = 37
 server_event_day_night_cycle_sync               = 38
 server_event_weather_sync                       = 39
 server_event_agent_set_position                 = 40
-server_event_me_chat                            = 41
+
 # Add new events here: above if sent from the server, below if from clients.
 
 client_event_bank_management                    = 86

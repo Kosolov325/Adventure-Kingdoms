@@ -1,5 +1,5 @@
 stringsfile version 1
-803
+802
 str_no_string NO_STRING!
 str_empty_string _
 str_yes Yes.
@@ -562,7 +562,6 @@ str_s1_revealed_money_pouch_containing_reg1_to_near_by_players_none {s1}_reveale
 str_your_target_too_far_away Your_target_is_too_far_away.
 str_no_target_selected No_target_selected.
 str_chat_format [{s1}]_{s0}
-str_me_format {s1}_me:*{s0}*
 str_send_message_to_players_nearby Send_message_to_players_nearby:
 str_send_message_to_the_s11 Send_message_to_the_{s11}:
 str_change_name_of_your_faction Change_the_name_of_your_faction:

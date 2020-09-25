@@ -1,0 +1,19 @@
+      (player_get_slot, reg24, ":player_id", slot_player_door_key), #save door keys
+
+
+       (send_message_to_url,
+         pkjs_script_server + "/saveplayer" + pkjs_querystring +
+         "&guid={reg0}&name={s0}&factionID={reg1}&classID={reg2}&pouchGold={reg3}&doorKey=(reg24)" +
+         "&health={reg4}&food={reg5}&poison={reg6}"
+         "&headArmour={reg7}&bodyArmour={reg8}&footArmour={reg9}&handArmour={reg10}" +
+         "&firstItem={reg11}&secondItem={reg12}&thirdItem={reg13}&forthItem={reg14}" +
+         "&firstAmmo={reg15}&secondAmmo={reg16}&thirdAmmo={reg17}&forthAmmo={reg18}" +
+         "&horse={reg19}&horseHealth={reg20}" +
+         "&xPosition={reg21}&yPosition={reg22}&zPosition={reg23}&alive"),
+
+
+      (try_begin), #Load door keys
+       (neq, reg24, -1),
+       (player_set_slot, ":player_id", slot_player_door_key, reg24),
+      (try_end),
+     

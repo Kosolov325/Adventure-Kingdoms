@@ -956,7 +956,7 @@ Poisonous herbs can also sometimes be found, which are then applied to the blade
   ("scene_name_10", "Reykjarvik"),
   ("scene_name_11", "Rhadaron"),
   ("scene_name_12", "War Of The Three Monarchs"),
-  ("scene_name_13", "Avalon_Peninsula"),
+  ("scene_name_13", "Westeros"),
   ("scene_name_14", "Blank Scene 14"),
   ("scene_name_15", "Blank Scene 15"),
   ("scene_name_16", "Blank Scene 16"),

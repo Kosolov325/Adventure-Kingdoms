@@ -2066,7 +2066,7 @@ scripts.extend([
                  (str_store_replace, s0, s0, "@/me ", s23),
                  (str_clear, s0),
                  (str_store_string, s0, s22),
-                 (str_store_string, s0, "@{s1} me: *{s0}*"),
+                 (str_store_string, s0, "str_me_format"),
                  (multiplayer_send_2_int_to_player, ":other_player_id", server_event_script_message_set_color, preset_message_green),
                  (multiplayer_send_string_to_player, ":other_player_id", ":server_event", s0),
                 (try_end),

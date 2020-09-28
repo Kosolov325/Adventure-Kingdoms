@@ -38,6 +38,7 @@ pkjs_action_bank_deposit                    = 11
 ##  PLAYER SLOTS           #############################
 ########################################################
 
+slot_player_chave                     = 0
 slot_player_faction_id                = 0
 slot_player_spawn_state               = 1 # listed below, starting with player_spawn_state_
 slot_player_spawn_invulnerable_time   = 2 # mission time when the player spawned with temporary invlunerability

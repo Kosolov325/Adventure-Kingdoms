@@ -2085,7 +2085,7 @@ scripts.extend([
                 (else_try),
                  (gt, ":target_key", 0),
                  (multiplayer_send_2_int_to_player, ":sender_player_id", server_event_script_message_set_color, 0x008000),
-                 (multiplayer_send_string_to_player, ":sender_player_id", ":server_event", "@Chave setada: " + ":target_key"),
+                 (multiplayer_send_string_to_player, ":sender_player_id", ":server_event", "@Chave setada: {s22}"),
                 (else_try),
                  (multiplayer_send_2_int_to_player, ":sender_player_id", server_event_script_message_set_color, 0xFF0000),
                  (multiplayer_send_string_to_player, ":sender_player_id", ":server_event", "@Comando inexistente"),

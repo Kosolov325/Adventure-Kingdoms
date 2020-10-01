@@ -1,5 +1,5 @@
 stringsfile version 1
-803
+804
 str_no_string NO_STRING!
 str_empty_string _
 str_yes Yes.
@@ -516,6 +516,7 @@ str_s1_captured_s2 {s1}_have_captured_{s2}!
 str_your_faction_not_hostile_to_s1 Your_faction_is_not_hostile_to_the_{s1}.
 str_your_faction_not_captured_required_points Your_faction_has_not_captured_the_required_secondary_points.
 str_door_locked_by_s1 The_door_is_locked_by_{s1}.
+str_door_locked Porta_trancada._Casa_ID:_{s25}
 str_door_bolted The_door_is_bolted_on_the_other_side.
 str_chest_locked_by_s1 This_chest_is_locked_by_{s1}.
 str_s0_killed_faction_member {s0}_killed_a_member_of_the_same_faction!

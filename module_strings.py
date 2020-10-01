@@ -742,6 +742,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("your_faction_not_hostile_to_s1", "Your faction is not hostile to the {s1}."),
   ("your_faction_not_captured_required_points", "Your faction has not captured the required secondary points."),
   ("door_locked_by_s1", "The door is locked by {s1}."),
+  ("door_locked", "Porta trancada. Casa ID: {s25}"),
   ("door_bolted", "The door is bolted on the other side."),
   ("chest_locked_by_s1", "This chest is locked by {s1}."),
   ("s0_killed_faction_member", "{s0} killed a member of the same faction!"),

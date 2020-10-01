@@ -2052,7 +2052,7 @@ scripts.extend([
               (str_starts_with, s0, "@/setchave "),
               (str_store_replace, s22, s0, "@/setchave ", s23),
               (str_to_num, ":target_key", s22, 1),
-              (player_set_slot, ":sender_player_id", slot_player_chave, ":target_key"),
+              (player_set_slot, ":sender_player_id", slot_player_door_key_target, ":target_key"),
               #(else_try),
               #(str_starts_with, s0, "@/setalvo "),
             (try_end),
@@ -8506,7 +8506,7 @@ scripts.extend([
     (lt, ":random", ":looting"),
     ]),
 
-  ("cf_use_teleport_door", # server: handle agents using a door which teleports to another linked door
+   ("cf_use_teleport_door", # server: handle agents using a door which teleports to another linked door
    [(store_script_param, ":agent_id", 1), # must be valid
     (store_script_param, ":instance_id", 2), # must be valid
     (store_script_param, ":x_offset", 3),
@@ -8517,8 +8517,27 @@ scripts.extend([
 
     (scene_prop_get_slot, ":linked_door_instance_id", ":instance_id", slot_scene_prop_linked_scene_prop),
     (gt, ":linked_door_instance_id", 0),
+    (prop_instance_get_variation_id, ":check_var", ":instance_id"),
     (agent_get_player_id, ":player_id", ":agent_id"),
     (player_is_active, ":player_id"),
+    (try_begin),
+      (ge, ":check_var", 9),
+      (player_get_slot, ":door_key", ":player_id", slot_player_door_key),
+      (eq, ":door_key", ":check_var"),
+      (prop_instance_get_position, pos1, ":linked_door_instance_id"),
+      (position_move_x, pos1, ":x_offset"),
+      (position_move_y, pos1, ":y_offset"),
+      (position_move_z, pos1, ":z_offset"),
+      (agent_set_position, ":agent_id", pos1),
+    
+    (else_try),
+      (ge, ":check_var", 9),
+      (player_get_slot, ":door_key", ":player_id", slot_player_door_key),
+      (neq, ":door_key", ":check_var"),
+      (str_store_string, s25, ":check_var"),
+      (multiplayer_send_2_int_to_player, ":player_id", server_event_preset_message, "str_door_locked", preset_message_fail_sound),
+    (else_try),
+    
     (player_get_slot, ":player_faction_id", ":player_id", slot_player_faction_id),
     (call_script, "script_scene_prop_get_owning_faction", ":instance_id"),
     (assign, ":faction_id", reg0),
@@ -8560,6 +8579,7 @@ scripts.extend([
       (assign, ":agent_id", ":horse_agent_id"),
     (try_end),
     (agent_set_position, ":agent_id", pos1),
+    (try_end),
     ]),
 
   ("cf_lock_teleport_door", # server: lock a teleport door that has been picked if the player is in the owning faction and has the key permission

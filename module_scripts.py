@@ -2052,7 +2052,7 @@ scripts.extend([
                  (assign, ":local_check", 1),
              (else_try),
                (str_equals, s0, "@/meuid"),
-               (player_get_unique_id, reg0, ":sender_player_id"),
+               (assign, ":sender_player_id", reg0),
                (multiplayer_send_string_to_player, ":sender_player_id", ":server_event", "@Seu ID: {reg0}."),
              (else_try),
                (str_starts_with, s0, "@/setchave "),

@@ -1,4 +1,4 @@
-53
+57
 qstr_Connection_successfu Connection_successfully_made_with_the_script_server.
 qstr_Connection_to_script Connection_to_script_server_denied._Invalid_server_id_/_api_key.
 qstr_Player_name_already_ Player_name_already_taken._Use_a_different_one!
@@ -46,7 +46,11 @@ qstr_/ /
 qstr_/me_ /me_
 qstr_/setchave_ /setchave_
 qstr_Chave_setada:_{s22} Chave_setada:_{s22}
-qstr_Comando_inexistente Comando_inexistente
+qstr_Chave_invalida Chave_invalida
+qstr_/setalvo_ /setalvo_
+qstr_/meuid /meuid
+qstr_Seu_ID:_{reg0}. Seu_ID:_{reg0}.
+qstr_Comando_Inexistente Comando_Inexistente
 qstr_[E]_Could_not_get_on [E]_Could_not_get_one_or_more_skybox_prop_instances!
 qstr_Time:_Day Time:_Day
 qstr_Time:_Sunrise Time:_Sunrise

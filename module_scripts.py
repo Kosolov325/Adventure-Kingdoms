@@ -8613,7 +8613,8 @@ scripts.extend([
 
     (scene_prop_get_slot, ":linked_door_instance_id", ":instance_id", slot_scene_prop_linked_scene_prop),
     (gt, ":linked_door_instance_id", 0),
-    (prop_instance_get_variation_id, ":check_var", ":instance_id"),
+    (prop_instance_get_variation_id, ":var", ":instance_id"),
+    (str_to_num, ":check_var", ":var"),
     (agent_get_player_id, ":player_id", ":agent_id"),
     (player_is_active, ":player_id"),
     (try_begin),
@@ -8630,9 +8631,9 @@ scripts.extend([
       (ge, ":check_var", 9),
       (player_get_slot, ":door_key", ":player_id", slot_player_door_key),
       (neq, ":door_key", ":check_var"),
-      (str_store_string, s25, ":check_var"),
+      (str_to_num, reg25, ":check_var"),
       (multiplayer_send_2_int_to_player, ":player_id", server_event_preset_message, "str_door_locked", preset_message_fail_sound),
-      (multiplayer_send_string_to_player, ":player_id", server_event_script_message, "@Voce nao tem as chaves desta porta! Porta: {s25}"),
+      (multiplayer_send_string_to_player, ":player_id", server_event_script_message, "@Voce nao tem as chaves desta porta! Porta: {reg25}"),
     (else_try),
     
     (player_get_slot, ":player_faction_id", ":player_id", slot_player_faction_id),

@@ -8632,6 +8632,7 @@ scripts.extend([
       (neq, ":door_key", ":check_var"),
       (str_store_string, s25, ":check_var"),
       (multiplayer_send_2_int_to_player, ":player_id", server_event_preset_message, "str_door_locked", preset_message_fail_sound),
+      (multiplayer_send_string_to_player, ":player_id", server_event_script_message, "@Voce nao tem as chaves desta porta! Porta: {s25}"),
     (else_try),
     
     (player_get_slot, ":player_faction_id", ":player_id", slot_player_faction_id),
